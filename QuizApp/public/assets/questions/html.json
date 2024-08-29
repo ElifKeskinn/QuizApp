@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "<a> etiketi ne işe yarar?",
+        "options": [
+          "Bir köprü tanımlar",
+          "Bir paragraf tanımlar",
+          "Bir resim tanımlar",
+          "Bir form tanımlar"
+        ],
+        "answer": "Bir köprü tanımlar"
+      },
+      {
+        "question": "<a> etiketinde URL'yi belirtmek için hangi attribute kullanılır?",
+        "options": [
+          "href",
+          "src",
+          "alt",
+          "link"
+        ],
+        "answer": "href"
+      },
+      {
+        "question": "<div> etiketi hangi amaçla kullanılır?",
+        "options": [
+          "Bölümleme",
+          "Metin biçimlendirme",
+          "Resim ekleme",
+          "Köprü oluşturma"
+        ],
+        "answer": "Bölümleme"
+      },
+      {
+        "question": "HTML'de yorumlar nasıl yazılır?",
+        "options": [
+          "<!-- yorum -->",
+          "// yorum",
+          "/* yorum */",
+          "# yorum"
+        ],
+        "answer": "<!-- yorum -->"
+      },
+      {
+        "question": "<form> etiketi ne işe yarar?",
+        "options": [
+          "Kullanıcı verilerini toplar",
+          "Bir tablo oluşturur",
+          "Bir liste tanımlar",
+          "Bir stil uygular"
+        ],
+        "answer": "Kullanıcı verilerini toplar"
+      },
+      {
+        "question": "HTML'de tablo oluşturmak için hangi etiketler kullanılır?",
+        "options": [
+          "<table>, <tr>, <td>",
+          "<form>, <input>, <button>",
+          "<div>, <span>, <p>",
+          "<ul>, <li>, <ol>"
+        ],
+        "answer": "<table>, <tr>, <td>"
+      },
+      {
+        "question": "Bir resim eklemek için hangi etiket kullanılır?",
+        "options": [
+          "<img>",
+          "<image>",
+          "<pic>",
+          "<photo>"
+        ],
+        "answer": "<img>"
+      },
+      {
+        "question": "<head> etiketi ne içerir?",
+        "options": [
+          "Başlık ve meta bilgileri",
+          "Sayfa içeriğini",
+          "Resimleri",
+          "Bağlantıları"
+        ],
+        "answer": "Başlık ve meta bilgileri"
+      },
+      {
+        "question": "<title> etiketi hangi bilgiyi tanımlar?",
+        "options": [
+          "Sayfanın başlığını",
+          "Sayfanın yazarını",
+          "Sayfanın URL'sini",
+          "Sayfanın açıklamasını"
+        ],
+        "answer": "Sayfanın başlığını"
+      },
+      {
+        "question": "HTML'de başlık seviyeleri hangi etiketlerle tanımlanır?",
+        "options": [
+          "<h1> - <h6>",
+          "<head> - <footer>",
+          "<div> - <span>",
+          "<p> - <blockquote>"
+        ],
+        "answer": "<h1> - <h6>"
+      }
+    ]
+  }
+  

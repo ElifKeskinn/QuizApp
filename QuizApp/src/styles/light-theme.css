@@ -1,0 +1,20 @@
+body.light-theme {
+  background-color: #F4F6FA;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+button{
+  background-color: #F4F6FA;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ddd;
+}

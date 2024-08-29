@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "JavaScript nedir?",
+        "options": [
+          "Bir programlama dili",
+          "Bir stil dili",
+          "Bir veritabanı",
+          "Bir metin işleme aracı"
+        ],
+        "answer": "Bir programlama dili"
+      },
+      {
+        "question": "JavaScript'te bir değişken nasıl tanımlanır?",
+        "options": [
+          "let x;",
+          "var x;",
+          "const x;",
+          "Hepsi"
+        ],
+        "answer": "Hepsi"
+      },
+      {
+        "question": "JavaScript'te bir fonksiyon nasıl tanımlanır?",
+        "options": [
+          "function myFunction() {}",
+          "def myFunction() {}",
+          "function: myFunction() {}",
+          "func myFunction() {}"
+        ],
+        "answer": "function myFunction() {}"
+      },
+      {
+        "question": "JavaScript'te bir if-else yapısı nasıl yazılır?",
+        "options": [
+          "if (x > 10) { } else { }",
+          "if x > 10 { } else { }",
+          "if (x > 10) then { } else { }",
+          "if x > 10 then { } else { }"
+        ],
+        "answer": "if (x > 10) { } else { }"
+      },
+      {
+        "question": "JavaScript'te dizilere nasıl erişilir?",
+        "options": [
+          "array[index]",
+          "array[index]",
+          "array.get(index)",
+          "array(index)"
+        ],
+        "answer": "array[index]"
+      },
+      {
+        "question": "JavaScript'te bir olay dinleyicisi nasıl eklenir?",
+        "options": [
+          "element.addEventListener('event', function)",
+          "element.onEvent('event', function)",
+          "element.event('event', function)",
+          "element.listen('event', function)"
+        ],
+        "answer": "element.addEventListener('event', function)"
+      },
+      {
+        "question": "JavaScript'te bir nesne nasıl tanımlanır?",
+        "options": [
+          "{ key: value }",
+          "object { key: value }",
+          "new Object(key, value)",
+          "key: value { }"
+        ],
+        "answer": "{ key: value }"
+      },
+      {
+        "question": "JavaScript'te döngü nasıl başlatılır?",
+        "options": [
+          "for (var i = 0; i < 10; i++) { }",
+          "loop (var i = 0; i < 10; i++) { }",
+          "while (i < 10) { }",
+          "repeat (var i = 0; i < 10; i++) { }"
+        ],
+        "answer": "for (var i = 0; i < 10; i++) { }"
+      },
+      {
+        "question": "JavaScript'te asenkron işlemler nasıl yapılır?",
+        "options": [
+          "async/await",
+          "setTimeout",
+          "Promise",
+          "callback"
+        ],
+        "answer": "async/await"
+      },
+      {
+        "question": "JavaScript'te bir nesnenin özelliğine nasıl erişilir?",
+        "options": [
+          "object.key",
+          "object.key()",
+          "object['key']",
+          "object.key[]"
+        ],
+        "answer": "object.key"
+      }
+    ]
+  }
+  
