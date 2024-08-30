@@ -25,14 +25,13 @@ const Question = ({ question, onAnswerSelect, selectedAnswer, onSubmitAnswer, is
           </button>
         ))}
         <button
-        onClick={onSubmitAnswer}
-        className="submit-button"
+          onClick={onSubmitAnswer}
+          className="submit-button"
 
-      >
-        Submit Answer
-      </button>
+        >
+          Cevapla      </button>
       </div>
-      
+
     </div>
   );
 };

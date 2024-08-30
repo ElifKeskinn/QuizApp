@@ -76,3 +76,18 @@
 .PlayBtn:hover {
     background-color: #8d1ab0 !important;
 }
+
+@media (max-width: 768px) {
+    .resultspage {
+        flex-direction: column; 
+        margin-left: 0; 
+    }
+
+    .left, .right {
+        width: 100%; 
+        margin: 0; 
+    }
+    .right {
+        margin-top: 20px; 
+    }
+}

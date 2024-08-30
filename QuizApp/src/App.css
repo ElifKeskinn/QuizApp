@@ -149,4 +149,17 @@ header div {
   
   
   
-  
+  @media (max-width: 768px) {
+    .StartPage {
+        flex-direction: column; 
+        margin-left: 0; }
+    
+    .leftSide, .rightSide {
+        flex: none; 
+        width: 100%; 
+    }
+    
+    .rightSide {
+        margin-top: 20px; 
+    }
+}

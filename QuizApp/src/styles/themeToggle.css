@@ -1,0 +1,41 @@
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+  }
+  
+  .toggle-slider {
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #A729F5; 
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-slider.light {
+    background-color: #A729F5;
+  }
+  
+  .toggle-slider.dark {
+    background-color: #8d1ab0;
+  }
+  
+  .toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 2.5px;
+    transition: margin 0.3s;
+  }
+  

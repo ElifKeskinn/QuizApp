@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Question from '../components/Question';
 import '../styles/quizPage.css';
-import htmlImg from '../img/html.png'; 
+import htmlImg from '../img/html.png';
 import cssImg from '../img/css.png';
 import accesImg from '../img/acces.png';
 import jsImg from '../img/js.png';
 
 const getImageForTopic = (topic) => {
+  if (!topic) return null;
+
   switch (topic.toLowerCase()) {
     case 'html':
       return htmlImg;
     case 'css':
       return cssImg;
-    case 'accessibility':
+    case 'acces':
       return accesImg;
     case 'javascript':
       return jsImg;
@@ -21,9 +23,9 @@ const getImageForTopic = (topic) => {
   }
 };
 
-const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
+const QuizPage = ({ topic, goToResultsPage, onProgressUpdate, initialQuestionIndex = 0 }) => {
   const [questions, setQuestions] = useState([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(initialQuestionIndex);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -35,6 +37,7 @@ const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
     fetch(`/assets/questions/${topic}.json`)
       .then(response => {
         if (response.ok) {
+          console.log(topic);
           return response.json();
         } else {
           throw new Error('Failed to fetch');
@@ -43,22 +46,19 @@ const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
       .then(data => {
         setQuestions(data.questions);
         setLoading(false);
-        onProgressUpdate(0, data.questions.length);
-            })
+        onProgressUpdate(currentQuestionIndex, data.questions.length);
+      })
       .catch(error => {
         setError(`Fetch error: ${error.message}`);
         setLoading(false);
       });
-  }, [topic , onProgressUpdate]);
+  }, [topic, onProgressUpdate, currentQuestionIndex]);
 
- 
   useEffect(() => {
     if (questions.length > 0) {
       onProgressUpdate(currentQuestionIndex, questions.length);
     }
   }, [currentQuestionIndex, questions.length, onProgressUpdate]);
-
-  
 
   const TopicComponent = ({ topic }) => {
     const imageSrc = getImageForTopic(topic);
@@ -70,7 +70,6 @@ const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
     );
   };
 
-    
   const handleAnswerSelection = (answer) => {
     setSelectedAnswer(answer);
   };
@@ -79,6 +78,7 @@ const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
     setIsSubmitted(true);
 
     const question = questions[currentQuestionIndex];
+    
     if (!selectedAnswer) return;
 
     const isCorrect = selectedAnswer === question.answer;
@@ -95,26 +95,24 @@ const QuizPage = ({ topic, goToResultsPage ,onProgressUpdate }) => {
       } else {
         goToResultsPage({ correctAnswers: correctAnswersCount, totalQuestions: questions.length });
       }
+      onProgressUpdate(currentQuestionIndex, questions.length);
     }, 1000);
   };
-
-
 
   const question = questions[currentQuestionIndex];
 
   return (
-
     <div className="quiz-page">
       <div className="selected-topic">
-      <TopicComponent topic={topic} />
+        <TopicComponent topic={topic} />
       </div>
       {question ? (
-      <Question 
-        question={question}
-        onAnswerSelect={handleAnswerSelection}
-        selectedAnswer={selectedAnswer}
-        onSubmitAnswer={handleSubmitAnswer}
-        isSubmitted={isSubmitted}
+        <Question
+          question={question}
+          onAnswerSelect={handleAnswerSelection}
+          selectedAnswer={selectedAnswer}
+          onSubmitAnswer={handleSubmitAnswer}
+          isSubmitted={isSubmitted}
         />
       ) : (
         <div>Loading question...</div>
